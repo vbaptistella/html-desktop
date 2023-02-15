@@ -1,0 +1,266 @@
+body {
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+}
+
+#desktop {
+  background: url("/win/res/vista/wallpapers/vista1.jpg");
+  background-size: cover;
+  height: calc(100vh - 32px);
+}
+
+#desktop .icon {
+  width: 96px;
+  height: 96px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#desktop .icon:hover {
+  right: 0px;
+  bottom: 0px;
+  background: rgb(0 255 255 / 50%);
+  border-radius: 5px;
+}
+
+#desktop .icon img {
+  width: 48px;
+  height: 48px;
+}
+
+#desktop .icon .icon-text {
+  color: #fff;
+  font-style: normal;
+  text-shadow: 0 0px 3px #000;
+  font-size: 13px;
+}
+
+#taskbar {
+  display: flex;
+  width: 100vw;
+  height: 32px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#8b8c8c, #48494a 50%, #1b1d1f 51%, #17191a);
+  box-shadow: 0 -1px 1px #545454;
+  border-top: 1px solid #b4b5b5;
+  z-index: 9998;
+}
+
+#startButton {
+  width: 48px;
+  height: 48px;
+  border: none;
+  padding: 0;
+  flex-shrink: 0;
+  background: url("res/vista/vistaStart.png");
+  top: -8px;
+  position: absolute;
+  background-position-x: -6px;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  margin-left: 10px;
+}
+
+#startButton:hover {
+  background-position-y: -46px;
+}
+
+#taskList {
+  width: 100%;
+  margin-left: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.taskButton {
+  color: #fff;
+  width: 25%;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(#b0b1b1, #949596 25%, #5b5c5d 50%, #1b1d1f 51%, #17191a);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin: 1px 2px;
+  padding: 0 10px;
+}
+
+#tray {
+  min-width: 100px;
+}
+
+#clock {
+  display: flex;
+  height: 100%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  font-size: 12px;
+}
+
+#tray {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 15px;
+}
+
+#startMenu.open {
+  bottom: 32px;
+  transition: bottom 0.2s ease;
+}
+
+#startMenu {
+  width: 480px;
+  height: 520px;
+  position: absolute;
+  bottom: -100%;
+  transition: bottom 0.2s ease;
+  left: 0;
+  background: linear-gradient(#5c5c5c, #000000);
+  border: 1px solid #9f9f9f;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 0 0 1px #3a3a3a, 0 5px 5px 5px rgb(0 0 0 / 50%);
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+
+.leftColumn {
+  width: 290px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.rightColumn {
+  flex: 1;
+}
+
+#quickApps {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #9f9f9f;
+  border: 1px solid #3a3a3a;
+  height: calc(100% - 30px);
+  width: 100%;
+}
+
+#quickApps .icon {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#quickApps .icon:hover {
+  right: 0px;
+  bottom: 0px;
+  background: rgb(0 255 255 / 50%);
+  border-radius: 5px;
+}
+
+#quickApps .icon img {
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+}
+
+#quickApps .icon .icon-text {
+  font-style: normal;
+  font-size: 13px;
+}
+
+#searchBar {
+  border: 1px solid #ccc;
+  height: 20px;
+}
+
+.userImage {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#systemApps {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 7px;
+}
+
+#systemApps button {
+  border: none;
+  background: none;
+  color: #fff;
+  height: 32px;
+  text-align: left;
+  padding: 0 7px;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(#99b4d1, #d6e4f3 15%, #bad2ea 16%);
+  border: 1px solid;
+  border-color: #fff #3fcef2 #3fcef2;
+  box-shadow: 0 0 3px #000000;
+  padding: 0 6px 6px;
+  resize: both;
+  overflow: hidden;
+}
+
+.titlebar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 26px;
+  padding: 3px 0;
+}
+
+.windowControls {
+  display: flex;
+  margin-right: 2px;
+}
+
+.windowControls button {
+  width: 28px;
+  height: 15px;
+  margin: 1px;
+  border: none;
+}
+
+.windowControls button.windowMinimize {
+  background: url("/win/res/vista/themes/basic/minimize.png");
+}
+.windowControls button.windowMaximize {
+  background: url("/win/res/vista/themes/basic/maximize.png");
+}
+.windowControls button.windowClose {
+  background: url("/win/res/vista/themes/basic/close.png");
+}
+
+.windowInner {
+  height: 100%;
+  background: #fff;
+  box-sizing: border-box;
+}

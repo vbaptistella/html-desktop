@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windows Vista</title>
+    <link rel="stylesheet" href="common/default.css" />
+    <link rel="stylesheet" href="win/vista.css" />
+  </head>
+  <body>
+    <div id="viewport">
+      <div id="desktop"></div>
+      <div id="taskbar">
+        <button id="startButton"></button>
+        <div id="taskList">
+          <div class="taskButton" data-window="window3SdVs9">
+            <div class="taskIcon"></div>
+            <div class="taskName">Window 1</div>
+          </div>
+          <div class="taskButton" data-window="window3SdVs9">
+            <div class="taskIcon"></div>
+            <div class="taskName">Window 1</div>
+          </div>
+        </div>
+        <div id="tray">
+          <div id="clock">
+            <span class="time"></span>
+          </div>
+        </div>
+      </div>
+      <div id="startMenu">
+        <div class="leftColumn">
+          <div id="quickApps"></div>
+          <input id="searchBar"></input>
+        </div>
+        <div class="rightColumn">
+          <div id="systemApps">
+            <div class="userImage">UserImage</div>
+            <button class="systemApp">User</button>
+            <button class="systemApp">Documents</button>
+            <button class="systemApp">Images</button>
+            <button class="systemApp">Music</button>
+            <button class="systemApp">Games</button>
+            <hr />
+            <button class="systemApp">User</button>
+            <button class="systemApp">User</button>
+          </div>
+          <div id="powerTray">
+              <button id="powerButton"></button>
+              <button id="lockButton"></button>
+          </div>
+        </div>
+      </div>
+      <div class="window" id="window3SdVs9">
+        <div class="titlebar">
+          <div class="windowIcon"></div>
+          <div class="windowTitle"></div>
+          <div class="windowControls">
+            <button class="windowMinimize"></button>
+            <button class="windowMaximize"></button>
+            <button class="windowClose"></button>
+          </div>
+        </div>
+        <div class="windowInner">
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="common/clock.js"></script>
+    <script src="common/default.js"></script>
+    <script src="common/windowmanager.js"></script>
+    <script src="win/icons.js"></script>
+  </body>
+</html>
